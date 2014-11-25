@@ -10,14 +10,15 @@
 class RelayControl
 {
   public:
-    RelayControl(int pin, char(2) type);
-    void on();
-    void off();
+    RelayControl(int pin, String type);
+    void open();
+    void close();
     void flick();
-    bool is_on();
+    bool is_closed();
   private:
     int _pin;
-    bool _state;
+    bool _flow;
+    String _type;
 };
 
 #endif
